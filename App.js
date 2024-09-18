@@ -37,20 +37,6 @@ const getTodosFromLocalStorage = () => {
   return todos;
 };
 
-const displayTodos = () => {
-  const todos = getTodosFromLocalStorage();
-  const ulMain = document.querySelector(".ulMain");
-
-  todos.forEach(todo => {
-    const listItem = document.createElement('li');
-    listItem.className = "listItem mt-2 todos";
-    listItem.textContent = todo;
-    ulMain.appendChild(listItem);
-  });
-
-  visibilityClearButton();
-};
-
 const visibilityClearButton = () => {
   const ulMain = document.querySelector(".ulMain");
   const clearButton = document.querySelector("#clearButton button");
@@ -81,5 +67,20 @@ const clearButton = document.querySelector("#clearButton button");
 clearButton.addEventListener("click", clearAllTodos);
 
 clearButton.style.display = "none";
+
+const displayTodos = () => {
+  const todos = getTodosFromLocalStorage();
+  const ulMain = document.querySelector(".ulMain");
+
+  todos.forEach(todo => {
+    const listItem = document.createElement('li');
+    listItem.className = "listItem mt-2 todos";
+    listItem.textContent = todo;
+    ulMain.appendChild(listItem);
+  });
+
+  visibilityClearButton();
+};
+
 
 window.addEventListener("DOMContentLoaded", displayTodos);

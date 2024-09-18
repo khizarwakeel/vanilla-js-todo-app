@@ -13,10 +13,16 @@
     border: 1px solid gainsboro;
     margin-left: 0px;
     list-style-type: none;
-    margin-left: -32px;
     padding: 12px;
+    margin: 0px 2px;
 }
 
 #clearButton button {
     display: none;
+}
+
+.ulMain {
+    max-height: 250px;
+    overflow: auto;
+    padding-left: 0;
 }
