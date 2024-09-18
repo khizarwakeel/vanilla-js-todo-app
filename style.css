@@ -1,0 +1,22 @@
+.container {
+    max-width: 400px;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.listItem {
+    border: 1px solid gainsboro;
+    margin-left: 0px;
+    list-style-type: none;
+    margin-left: -32px;
+    padding: 12px;
+}
+
+#clearButton button {
+    display: none;
+}
